@@ -1,0 +1,42 @@
+name: Update Fishtest Test Data
+
+on:
+  schedule:
+    # Runs every 5 minutes
+    - cron: '*/5 * * * *'
+  workflow_dispatch: # Allows manual triggering from the Actions tab
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    # Grant permissions for the action to push code back to the repo
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Fetch, process, and save data
+        run: node ./.github/scripts/fetch_and_process.js
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          # Add both files; git will only commit if they actually changed
+          git add latest_data.json historical_data.json
+          # Check if there are staged changes
+          if git diff --staged --quiet; then
+            echo "No changes detected in data files."
+          else
+            echo "Data changes detected. Committing..."
+            git commit -m "Update Fishtest test data [skip ci]"
+            # Add [skip ci] to prevent the commit from triggering other CI workflows if you have them
+            git push
+          fi
