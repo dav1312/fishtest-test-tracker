@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fishtest Test Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/date-fns"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Fishtest Active Tests</h1>
+
+        <div class="controls">
+            <input type="text" id="filterInput" placeholder="Filter by username, branch...">
+        </div>
+
+        <table id="testsTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Branch</th>
+                    <th>LLR</th>
+                    <th>Games</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Test data will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+
+        <div id="chartContainer" style="display: none;">
+            <h2 id="chartTitle">Test Progress</h2>
+            <div class="chart-controls">
+                <button id="toggleLLR">Show LLR</button>
+                <button id="toggleWML">Show Wins - Losses</button>
+            </div>
+            <canvas id="progressChart"></canvas>
+            <p id="testEndedMessage" style="display: none; text-align: center; color: red; margin-top: 10px;">
+                This test has ended and is no longer active. Chart shows historical data.
+            </p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

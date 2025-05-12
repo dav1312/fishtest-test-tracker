@@ -1,0 +1,96 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+.controls {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#filterInput {
+    padding: 10px;
+    width: 50%;
+    max-width: 400px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f0f0f0;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.branch-link {
+    color: #007bff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.branch-link:hover {
+    text-decoration: underline;
+}
+
+#chartContainer {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.chart-controls {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.chart-controls button {
+    padding: 8px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.chart-controls button:hover {
+    background-color: #0056b3;
+}
+
+#progressChart {
+    max-width: 100%;
+}
