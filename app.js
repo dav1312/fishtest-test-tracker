@@ -134,8 +134,16 @@ function renderTable(testsToRender) {
         idLink.rel = 'noopener noreferrer'; // Security best practice for _blank links
         idCell.appendChild(idLink);
 
-        row.insertCell().textContent = test.username;
+        // Username Cell
+        const userCell = row.insertCell();
+        const userLink = document.createElement('a');
+        userLink.href = '#'; // Prevent page jump
+        userLink.textContent = test.username;
+        userLink.classList.add('username-filter-link'); // Add a class for styling and event handling
+        userLink.dataset.username = test.username; // Store username for the event handler
+        userCell.appendChild(userLink);
 
+        // Branch Name Cell
         const branchCell = row.insertCell();
         const branchLink = document.createElement('a');
         branchLink.href = '#';
@@ -327,9 +335,26 @@ function toggleChartMetric(metricToShow) {
     currentChart.update();
 }
 
+// --- Function to handle username click for filtering ---
+function handleUsernameFilterClick(event) {
+    if (event.target.classList.contains('username-filter-link')) {
+        event.preventDefault(); // Prevent default <a> behavior
+        const usernameToFilter = event.target.dataset.username;
+
+        if (usernameToFilter) {
+            filterInput.value = usernameToFilter; // Set the filter input's value
+            filterAndRenderTable();               // Trigger the filtering
+            filterInput.focus();                  // Optional: focus the input field
+        }
+    }
+}
+
 // --- Event Listeners ---
 filterInput.addEventListener('input', filterAndRenderTable);
-testsTableBody.addEventListener('click', handleBranchClick);
+testsTableBody.addEventListener('click', (event) => {
+    handleBranchClick(event);         // Handle branch clicks for charts
+    handleUsernameFilterClick(event); // Handle username clicks for filtering
+});
 toggleWMLButton.addEventListener('click', () => toggleChartMetric('wml'));
 toggleLLRButton.addEventListener('click', () => toggleChartMetric('llr'));
 
