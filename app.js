@@ -12,6 +12,7 @@ const progressChartCanvas = document.getElementById('progressChart');
 const toggleWMLButton = document.getElementById('toggleWML');
 const toggleLLRButton = document.getElementById('toggleLLR');
 const testEndedMessage = document.getElementById('testEndedMessage');
+const lastUpdateTimeElement = document.getElementById('lastUpdateTime');
 
 let allTestsData = []; // Populated from latest_data.json
 let historicalData = {}; // Populated from historical_data.json
@@ -19,6 +20,53 @@ let currentChart = null;
 let currentTrackingTestId = null; // Track which chart is visible
 let currentTrackingBranchName = null;
 let currentVisibleMetric = 'llr';
+
+// --- Utility function to format time ago ---
+function formatTimeAgo(timestampSeconds) {
+    if (!timestampSeconds) return "N/A";
+
+    const now = Math.floor(Date.now() / 1000); // Current time in seconds
+    const diffSeconds = now - timestampSeconds;
+
+    if (diffSeconds < 0) return "in the future?"; // Should not happen
+    if (diffSeconds < 60) return `${diffSeconds} sec ago`;
+
+    const diffMinutes = Math.floor(diffSeconds / 60);
+    if (diffMinutes < 60) return `${diffMinutes} min ago`;
+
+    const diffHours = Math.floor(diffMinutes / 60);
+    if (diffHours < 24) return `${diffHours} hr ago`;
+
+    const diffDays = Math.floor(diffHours / 24);
+    return `${diffDays} day(s) ago`;
+}
+
+// --- Find the latest update time from historical data ---
+function getLatestUpdateTime(history) {
+    let latestTime = 0;
+    if (history && typeof history === 'object') {
+        for (const testId in history) {
+            const testEntries = history[testId];
+            if (Array.isArray(testEntries) && testEntries.length > 0) {
+                const lastEntry = testEntries[testEntries.length - 1];
+                if (lastEntry && typeof lastEntry.time === 'number' && lastEntry.time > latestTime) {
+                    latestTime = lastEntry.time;
+                }
+            }
+        }
+    }
+    return latestTime > 0 ? latestTime : null; // Return null if no valid time found
+}
+
+// --- Update the display for "Last updated" ---
+function displayLastUpdateTime() {
+    const latestTimestamp = getLatestUpdateTime(historicalData);
+    if (latestTimestamp) {
+        lastUpdateTimeElement.textContent = `Latest data: ${formatTimeAgo(latestTimestamp)}`;
+    } else {
+        lastUpdateTimeElement.textContent = 'Latest data: N/A (or still loading)';
+    }
+}
 
 // --- Data Fetching ---
 async function loadDataFromFiles() {
@@ -43,12 +91,14 @@ async function loadDataFromFiles() {
         historicalData = historyResponse.ok ? await historyResponse.json() : {}; // Handle 404 for history
 
         console.log("Successfully loaded data from local JSON files.");
+        displayLastUpdateTime();
 
     } catch (error) {
         console.error("Error loading data from JSON files:", error);
         testsTableBody.innerHTML = `<tr><td colspan="5" style="text-align:center; color:red;">Error loading test data. Check console or wait for data generation.</td></tr>`;
         allTestsData = []; // Ensure table shows error state
         historicalData = {};
+        lastUpdateTimeElement.textContent = 'Latest data: Error loading'; // Update status
     }
 }
 
