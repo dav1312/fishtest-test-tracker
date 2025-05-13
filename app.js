@@ -123,7 +123,17 @@ function renderTable(testsToRender) {
 
     testsToRender.forEach(test => {
         const row = testsTableBody.insertRow();
-        row.insertCell().textContent = test.id.substring(0, 8) + '...';
+
+        // Test ID Cell
+        const idCell = row.insertCell();
+        const idLink = document.createElement('a');
+        idLink.href = `https://tests.stockfishchess.org/tests/view/${test.id}`;
+        idLink.textContent = test.id.substring(0, 8) + '...';
+        idLink.title = test.id; // Show full ID on hover
+        idLink.target = '_blank'; // Open in a new tab
+        idLink.rel = 'noopener noreferrer'; // Security best practice for _blank links
+        idCell.appendChild(idLink);
+
         row.insertCell().textContent = test.username;
 
         const branchCell = row.insertCell();
@@ -131,6 +141,7 @@ function renderTable(testsToRender) {
         branchLink.href = '#';
         branchLink.classList.add('branch-link');
         branchLink.textContent = test.branch;
+        branchLink.title = test.branch; // Tooltip for full branch name
         branchLink.dataset.testId = test.id;
         branchLink.dataset.branchName = test.branch;
         branchCell.appendChild(branchLink);

@@ -54,7 +54,37 @@ tbody tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
+.table-container {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+/* Make table headers sticky */
+#testsTable thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #f0f0f0;
+}
+
+.branch-name-content {
+    display: inline-block;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+}
+
 .branch-link {
+    display: inline-block;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
     color: #007bff;
     text-decoration: none;
     cursor: pointer;
