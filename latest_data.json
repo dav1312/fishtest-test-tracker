@@ -3,45 +3,45 @@
     "id": "68226b523629b02d74b17b89",
     "username": "shawnxu",
     "branch": "test1368",
-    "llr": 1.7840841512454642,
-    "wml": 121,
-    "wins": 5981,
-    "losses": 5860,
-    "draws": 11673,
-    "totalGames": 23514
+    "llr": 1.811933153412565,
+    "wml": 123,
+    "wins": 6067,
+    "losses": 5944,
+    "draws": 11839,
+    "totalGames": 23850
   },
   {
     "id": "68132f923629b02d74b1699e",
     "username": "sg",
     "branch": "tuned_history_update2c",
-    "llr": 1.305344242097859,
-    "wml": 400,
-    "wins": 37024,
-    "losses": 36624,
-    "draws": 70532,
-    "totalGames": 144180
+    "llr": 1.1873649345893518,
+    "wml": 391,
+    "wins": 37094,
+    "losses": 36703,
+    "draws": 70689,
+    "totalGames": 144486
   },
   {
     "id": "6810d0533629b02d74b16756",
     "username": "sg",
     "branch": "tuned_history_update2a_pr",
-    "llr": 1.0975980170823618,
-    "wml": -20,
-    "wins": 28224,
-    "losses": 28244,
-    "draws": 53110,
-    "totalGames": 109578
+    "llr": 1.0331823912749272,
+    "wml": -25,
+    "wins": 28255,
+    "losses": 28280,
+    "draws": 53167,
+    "totalGames": 109702
   },
   {
     "id": "6822a67c3629b02d74b17bd6",
     "username": "ergodice",
     "branch": "simplecheckeval",
-    "llr": 1.045540365702412,
-    "wml": 133,
-    "wins": 6974,
-    "losses": 6841,
-    "draws": 12905,
-    "totalGames": 26720
+    "llr": 0.9283149953498182,
+    "wml": 123,
+    "wins": 7055,
+    "losses": 6932,
+    "draws": 13085,
+    "totalGames": 27072
   },
   {
     "id": "6814dd973629b02d74b16bac",
@@ -58,67 +58,34 @@
     "id": "681902de3629b02d74b16f6d",
     "username": "ergodice",
     "branch": "checkeval4",
-    "llr": 0.7253386477784011,
-    "wml": 403,
-    "wins": 43689,
-    "losses": 43286,
-    "draws": 83587,
-    "totalGames": 170562
+    "llr": 0.8539297452206802,
+    "wml": 414,
+    "wins": 43767,
+    "losses": 43353,
+    "draws": 83718,
+    "totalGames": 170838
   },
   {
     "id": "6816a7e13629b02d74b16d42",
     "username": "sg",
     "branch": "reintroduce_discovered_check_bonus",
-    "llr": 0.7188515149147201,
-    "wml": 265,
-    "wins": 35827,
-    "losses": 35562,
-    "draws": 66307,
-    "totalGames": 137696
-  },
-  {
-    "id": "681e7a4f3629b02d74b176f5",
-    "username": "Nonlinear",
-    "branch": "tuned-reductions",
-    "llr": 0.364973839731598,
-    "wml": 208,
-    "wins": 31031,
-    "losses": 30823,
-    "draws": 58114,
-    "totalGames": 119968
-  },
-  {
-    "id": "681892653629b02d74b16ef9",
-    "username": "joster",
-    "branch": "skipd2pvs",
-    "llr": 0.3582606606015175,
-    "wml": 741,
-    "wins": 124908,
-    "losses": 124167,
-    "draws": 233357,
-    "totalGames": 482432
-  },
-  {
-    "id": "68230b79a527315e07ccc8dc",
-    "username": "AliceRoselia",
-    "branch": "NMP_no_tt_move",
-    "llr": 0.34818558997400884,
-    "wml": 42,
-    "wins": 2057,
-    "losses": 2015,
-    "draws": 3832,
-    "totalGames": 7904
+    "llr": 0.6119221353554251,
+    "wml": 256,
+    "wins": 35900,
+    "losses": 35644,
+    "draws": 66440,
+    "totalGames": 137984
   },
   {
     "id": "682244603629b02d74b17b4f",
     "username": "0x539",
     "branch": "movepick-tune",
-    "llr": 0.29064482078978615,
-    "wml": 82,
-    "wins": 7404,
-    "losses": 7322,
-    "draws": 14032,
-    "totalGames": 28758
+    "llr": 0.3037156437983839,
+    "wml": 84,
+    "wins": 7523,
+    "losses": 7439,
+    "draws": 14252,
+    "totalGames": 29214
   },
   {
     "id": "680fedae3629b02d74b16626",
@@ -132,26 +99,59 @@
     "totalGames": 60558
   },
   {
+    "id": "681e7a4f3629b02d74b176f5",
+    "username": "Nonlinear",
+    "branch": "tuned-reductions",
+    "llr": 0.15205208759096592,
+    "wml": 190,
+    "wins": 31172,
+    "losses": 30982,
+    "draws": 58358,
+    "totalGames": 120512
+  },
+  {
     "id": "682307f2a527315e07ccc8d0",
     "username": "yT7Af9Fc",
     "branch": "patch-7",
-    "llr": 0.17511314501902306,
-    "wml": 22,
-    "wins": 1054,
-    "losses": 1032,
-    "draws": 1892,
-    "totalGames": 3978
+    "llr": 0.12780809167726057,
+    "wml": 19,
+    "wins": 1151,
+    "losses": 1132,
+    "draws": 2073,
+    "totalGames": 4356
+  },
+  {
+    "id": "68223c483629b02d74b17b42",
+    "username": "Fisherman",
+    "branch": "GBQuiets3",
+    "llr": 0.09397593717584017,
+    "wml": 79,
+    "wins": 12505,
+    "losses": 12426,
+    "draws": 23197,
+    "totalGames": 48128
   },
   {
     "id": "68109df43629b02d74b166ec",
     "username": "fauzi2",
     "branch": "newt1",
-    "llr": 0.12608669221539334,
-    "wml": 406,
-    "wins": 49755,
-    "losses": 49349,
-    "draws": 95116,
-    "totalGames": 194220
+    "llr": 0.05076793045631744,
+    "wml": 400,
+    "wins": 49783,
+    "losses": 49383,
+    "draws": 95144,
+    "totalGames": 194310
+  },
+  {
+    "id": "68230b79a527315e07ccc8dc",
+    "username": "AliceRoselia",
+    "branch": "NMP_no_tt_move",
+    "llr": -0.011773937859206687,
+    "wml": 12,
+    "wins": 2300,
+    "losses": 2288,
+    "draws": 4340,
+    "totalGames": 8928
   },
   {
     "id": "681b4fad3629b02d74b17209",
@@ -165,26 +165,26 @@
     "totalGames": 37312
   },
   {
+    "id": "681892653629b02d74b16ef9",
+    "username": "joster",
+    "branch": "skipd2pvs",
+    "llr": -0.051059239880824246,
+    "wml": 707,
+    "wins": 125314,
+    "losses": 124607,
+    "draws": 234079,
+    "totalGames": 484000
+  },
+  {
     "id": "68231fa4a527315e07ccc8fa",
     "username": "Vizvezdenec",
     "branch": "pruningMeme3",
-    "llr": -0.021075067873331726,
-    "wml": 0,
-    "wins": 197,
-    "losses": 197,
-    "draws": 454,
-    "totalGames": 848
-  },
-  {
-    "id": "681cfe473629b02d74b1756b",
-    "username": "sg",
-    "branch": "good_cap_margin_c",
-    "llr": -0.024693976812183126,
-    "wml": 134,
-    "wins": 24228,
-    "losses": 24094,
-    "draws": 45054,
-    "totalGames": 93376
+    "llr": -0.053218226094453536,
+    "wml": -2,
+    "wins": 239,
+    "losses": 241,
+    "draws": 544,
+    "totalGames": 1024
   },
   {
     "id": "6810af553629b02d74b16708",
@@ -196,28 +196,6 @@
     "losses": 18829,
     "draws": 34687,
     "totalGames": 72448
-  },
-  {
-    "id": "68223c483629b02d74b17b42",
-    "username": "Fisherman",
-    "branch": "GBQuiets3",
-    "llr": -0.09062906681394878,
-    "wml": 62,
-    "wins": 12375,
-    "losses": 12313,
-    "draws": 22992,
-    "totalGames": 47680
-  },
-  {
-    "id": "6821edae3629b02d74b17a9a",
-    "username": "Nonlinear",
-    "branch": "clean-up-code-3",
-    "llr": -0.10228204334150195,
-    "wml": -54,
-    "wins": 11007,
-    "losses": 11061,
-    "draws": 20492,
-    "totalGames": 42560
   },
   {
     "id": "680ee7803629b02d74b16104",
@@ -242,15 +220,37 @@
     "totalGames": 60448
   },
   {
-    "id": "681f9ed43629b02d74b177c3",
-    "username": "shawnxu",
-    "branch": "test1365",
-    "llr": -0.24699715203326728,
-    "wml": -80,
-    "wins": 14990,
-    "losses": 15070,
-    "draws": 29202,
-    "totalGames": 59262
+    "id": "68222fee3629b02d74b17b18",
+    "username": "fauzi2",
+    "branch": "rdtm3",
+    "llr": -0.18973452190236215,
+    "wml": 23,
+    "wins": 7116,
+    "losses": 7093,
+    "draws": 13183,
+    "totalGames": 27392
+  },
+  {
+    "id": "681389403629b02d74b16a08",
+    "username": "Fisherman",
+    "branch": "GBQuiets2",
+    "llr": -0.21642273925964123,
+    "wml": 31,
+    "wins": 8854,
+    "losses": 8823,
+    "draws": 16627,
+    "totalGames": 34304
+  },
+  {
+    "id": "681cfe473629b02d74b1756b",
+    "username": "sg",
+    "branch": "good_cap_margin_c",
+    "llr": -0.22460164100024113,
+    "wml": 117,
+    "wins": 24313,
+    "losses": 24196,
+    "draws": 45251,
+    "totalGames": 93760
   },
   {
     "id": "6817ad3d3629b02d74b16e33",
@@ -275,37 +275,26 @@
     "totalGames": 10944
   },
   {
-    "id": "68222fee3629b02d74b17b18",
-    "username": "fauzi2",
-    "branch": "rdtm3",
-    "llr": -0.28658005913635554,
-    "wml": 14,
-    "wins": 7013,
-    "losses": 6999,
-    "draws": 12996,
-    "totalGames": 27008
+    "id": "681f9ed43629b02d74b177c3",
+    "username": "shawnxu",
+    "branch": "test1365",
+    "llr": -0.30552191619274194,
+    "wml": -85,
+    "wins": 15055,
+    "losses": 15140,
+    "draws": 29313,
+    "totalGames": 59508
   },
   {
-    "id": "681389403629b02d74b16a08",
-    "username": "Fisherman",
-    "branch": "GBQuiets2",
-    "llr": -0.2970583034772778,
-    "wml": 23,
-    "wins": 8689,
-    "losses": 8666,
-    "draws": 16341,
-    "totalGames": 33696
-  },
-  {
-    "id": "6820eaa73629b02d74b178cf",
-    "username": "TarasVuk",
-    "branch": "stats_all_node",
-    "llr": -0.3611319153275728,
-    "wml": 73,
-    "wins": 18560,
-    "losses": 18487,
-    "draws": 34633,
-    "totalGames": 71680
+    "id": "6821edae3629b02d74b17a9a",
+    "username": "Nonlinear",
+    "branch": "clean-up-code-3",
+    "llr": -0.31909126038552094,
+    "wml": -73,
+    "wins": 11102,
+    "losses": 11175,
+    "draws": 20699,
+    "totalGames": 42976
   },
   {
     "id": "6821a9593629b02d74b17a24",
@@ -330,103 +319,114 @@
     "totalGames": 4704
   },
   {
-    "id": "682079f63629b02d74b17842",
-    "username": "Nonlinear",
-    "branch": "nmp-save-nullvalue",
-    "llr": -0.4242799984891544,
-    "wml": 47,
-    "wins": 10337,
-    "losses": 10290,
-    "draws": 19591,
-    "totalGames": 40218
+    "id": "6820eaa73629b02d74b178cf",
+    "username": "TarasVuk",
+    "branch": "stats_all_node",
+    "llr": -0.4839438605720619,
+    "wml": 63,
+    "wins": 18708,
+    "losses": 18645,
+    "draws": 34903,
+    "totalGames": 72256
   },
   {
     "id": "682155063629b02d74b17978",
     "username": "tsoj",
     "branch": "futility_reductions",
-    "llr": -0.5663961900978163,
-    "wml": 43,
-    "wins": 11321,
-    "losses": 11278,
-    "draws": 21579,
-    "totalGames": 44178
+    "llr": -0.5479718770590714,
+    "wml": 45,
+    "wins": 11383,
+    "losses": 11338,
+    "draws": 21715,
+    "totalGames": 44436
   },
   {
-    "id": "681f83b73629b02d74b177ac",
-    "username": "TarasVuk",
-    "branch": "tt_cutoff_mate",
-    "llr": -0.6026654024545909,
-    "wml": 119,
-    "wins": 30468,
-    "losses": 30349,
-    "draws": 57103,
-    "totalGames": 117920
-  },
-  {
-    "id": "68225e093629b02d74b17b71",
-    "username": "shawnxu",
-    "branch": "test1367",
-    "llr": -0.6504695542871272,
-    "wml": -12,
-    "wins": 5184,
-    "losses": 5196,
-    "draws": 9828,
-    "totalGames": 20208
+    "id": "682079f63629b02d74b17842",
+    "username": "Nonlinear",
+    "branch": "nmp-save-nullvalue",
+    "llr": -0.5776266745863401,
+    "wml": 35,
+    "wins": 10405,
+    "losses": 10370,
+    "draws": 19713,
+    "totalGames": 40488
   },
   {
     "id": "68222b443629b02d74b17b08",
     "username": "fauzi2",
     "branch": "rdtm2",
-    "llr": -0.6517649535546579,
-    "wml": -18,
-    "wins": 6887,
-    "losses": 6905,
-    "draws": 12928,
-    "totalGames": 26720
+    "llr": -0.5863311889942349,
+    "wml": -12,
+    "wins": 6965,
+    "losses": 6977,
+    "draws": 13034,
+    "totalGames": 26976
   },
   {
-    "id": "681d2a113629b02d74b1759e",
-    "username": "Nonlinear",
-    "branch": "nmp-save-nullvalue-2",
-    "llr": -0.6749396922507819,
-    "wml": 163,
-    "wins": 39233,
-    "losses": 39070,
-    "draws": 73409,
-    "totalGames": 151712
+    "id": "681f83b73629b02d74b177ac",
+    "username": "TarasVuk",
+    "branch": "tt_cutoff_mate",
+    "llr": -0.6073036811737815,
+    "wml": 119,
+    "wins": 30542,
+    "losses": 30423,
+    "draws": 57243,
+    "totalGames": 118208
   },
   {
     "id": "680e38d53629b02d74b15d86",
     "username": "AliceRoselia",
     "branch": "prior_singular_extension",
-    "llr": -0.6817174521209907,
-    "wml": 617,
-    "wins": 91980,
-    "losses": 91363,
-    "draws": 172689,
-    "totalGames": 356032
+    "llr": -0.6449685555837806,
+    "wml": 620,
+    "wins": 92012,
+    "losses": 91392,
+    "draws": 172754,
+    "totalGames": 356158
   },
   {
-    "id": "681f90443629b02d74b177b2",
-    "username": "TarasVuk",
-    "branch": "futility_corr_sign",
-    "llr": -0.687110849247189,
-    "wml": 100,
-    "wins": 28557,
-    "losses": 28457,
-    "draws": 52746,
-    "totalGames": 109760
+    "id": "681d2a113629b02d74b1759e",
+    "username": "Nonlinear",
+    "branch": "nmp-save-nullvalue-2",
+    "llr": -0.6472456116781392,
+    "wml": 166,
+    "wins": 39325,
+    "losses": 39159,
+    "draws": 73580,
+    "totalGames": 152064
+  },
+  {
+    "id": "68221b0d3629b02d74b17ae4",
+    "username": "fauzi2",
+    "branch": "simp181a",
+    "llr": -0.6838378452643308,
+    "wml": -29,
+    "wins": 5646,
+    "losses": 5675,
+    "draws": 10279,
+    "totalGames": 21600
+  },
+  {
+    "id": "68225e093629b02d74b17b71",
+    "username": "shawnxu",
+    "branch": "test1367",
+    "llr": -0.7204110948402997,
+    "wml": -17,
+    "wins": 5255,
+    "losses": 5272,
+    "draws": 10017,
+    "totalGames": 20544
   },
   {
     "id": "6821e9ea3629b02d74b17a8d",
     "username": "fauzi2",
     "branch": "rdtm1a",
-    "llr": -0.733008916243966,
-    "wml": -33,
-    "wins": 5503,
-    "losses": 5536,
-    "draws": 10049,
-    "totalGames": 21088
+    "llr": -0.7244974381889703,
+    "wml": -32,
+    "wins": 5551,
+    "losses": 5583,
+    "draws": 10146,
+    "totalGames": 21280
   },
   {
     "id": "6818b3eb3629b02d74b16f23",
@@ -451,6 +451,17 @@
     "totalGames": 20972
   },
   {
+    "id": "682212ec3629b02d74b17ad5",
+    "username": "yT7Af9Fc",
+    "branch": "patch-8",
+    "llr": -0.7650076272612437,
+    "wml": 20,
+    "wins": 15583,
+    "losses": 15563,
+    "draws": 28630,
+    "totalGames": 59776
+  },
+  {
     "id": "6810d0d63629b02d74b16758",
     "username": "ergodice",
     "branch": "pcmcutoff8",
@@ -462,59 +473,48 @@
     "totalGames": 238938
   },
   {
-    "id": "682212ec3629b02d74b17ad5",
-    "username": "yT7Af9Fc",
-    "branch": "patch-8",
-    "llr": -0.7666764554095228,
-    "wml": 19,
-    "wins": 15438,
-    "losses": 15419,
-    "draws": 28343,
-    "totalGames": 59200
-  },
-  {
-    "id": "68221b0d3629b02d74b17ae4",
-    "username": "fauzi2",
-    "branch": "simp181a",
-    "llr": -0.7789729201841181,
-    "wml": -38,
-    "wins": 5554,
-    "losses": 5592,
-    "draws": 10102,
-    "totalGames": 21248
+    "id": "681f90443629b02d74b177b2",
+    "username": "TarasVuk",
+    "branch": "futility_corr_sign",
+    "llr": -0.8667884043230032,
+    "wml": 85,
+    "wins": 28705,
+    "losses": 28620,
+    "draws": 53011,
+    "totalGames": 110336
   },
   {
     "id": "681329e33629b02d74b16998",
     "username": "DanSamek",
     "branch": "impr_cm_bonus_2",
-    "llr": -0.900361722662998,
-    "wml": 91,
-    "wins": 20658,
-    "losses": 20567,
-    "draws": 39727,
-    "totalGames": 80952
+    "llr": -0.8995167583100108,
+    "wml": 92,
+    "wins": 20784,
+    "losses": 20692,
+    "draws": 39938,
+    "totalGames": 81414
   },
   {
     "id": "681bc3f43629b02d74b172d1",
     "username": "DanSamek",
     "branch": "tt_high_eval_di_1",
-    "llr": -0.953328062018237,
-    "wml": 192,
-    "wins": 49796,
-    "losses": 49604,
-    "draws": 92984,
-    "totalGames": 192384
+    "llr": -1.0332658562906614,
+    "wml": 187,
+    "wins": 50123,
+    "losses": 49936,
+    "draws": 93605,
+    "totalGames": 193664
   },
   {
     "id": "6820139b3629b02d74b1780b",
     "username": "Fisherman",
     "branch": "GBQuiets3",
-    "llr": -0.9587200361469235,
-    "wml": 10,
-    "wins": 16761,
-    "losses": 16751,
-    "draws": 31192,
-    "totalGames": 64704
+    "llr": -1.0341133614315143,
+    "wml": 4,
+    "wins": 16871,
+    "losses": 16867,
+    "draws": 31414,
+    "totalGames": 65152
   },
   {
     "id": "681d08bc3629b02d74b17577",
@@ -528,6 +528,17 @@
     "totalGames": 12896
   },
   {
+    "id": "6817a74a3629b02d74b16e2c",
+    "username": "DanSamek",
+    "branch": "lmr_fd_cutoff_cnt",
+    "llr": -1.0769447838441466,
+    "wml": 185,
+    "wins": 34375,
+    "losses": 34190,
+    "draws": 65619,
+    "totalGames": 134184
+  },
+  {
     "id": "681275cf3629b02d74b16922",
     "username": "Fisherman",
     "branch": "GBQuiets2",
@@ -539,48 +550,26 @@
     "totalGames": 13760
   },
   {
-    "id": "6817a74a3629b02d74b16e2c",
-    "username": "DanSamek",
-    "branch": "lmr_fd_cutoff_cnt",
-    "llr": -1.0943516172928431,
-    "wml": 183,
-    "wins": 34313,
-    "losses": 34130,
-    "draws": 65471,
-    "totalGames": 133914
-  },
-  {
     "id": "68222ff13629b02d74b17b1a",
     "username": "fauzi2",
     "branch": "rdtm3a",
-    "llr": -1.135294742279828,
-    "wml": -62,
-    "wins": 6580,
-    "losses": 6642,
-    "draws": 12602,
-    "totalGames": 25824
+    "llr": -1.1648883001508452,
+    "wml": -64,
+    "wins": 6687,
+    "losses": 6751,
+    "draws": 12802,
+    "totalGames": 26240
   },
   {
     "id": "6822a9dd3629b02d74b17bdb",
     "username": "ergodice",
     "branch": "confusion1",
-    "llr": -1.1491253593353046,
-    "wml": -58,
-    "wins": 7747,
-    "losses": 7805,
-    "draws": 14368,
-    "totalGames": 29920
-  },
-  {
-    "id": "6820e6e53629b02d74b178cb",
-    "username": "Nonlinear",
-    "branch": "nmp-save-nullvalue-2",
-    "llr": -1.192235971150847,
-    "wml": 1,
-    "wins": 18813,
-    "losses": 18812,
-    "draws": 35015,
-    "totalGames": 72640
+    "llr": -1.2252783219589618,
+    "wml": -64,
+    "wins": 7887,
+    "losses": 7951,
+    "draws": 14594,
+    "totalGames": 30432
   },
   {
     "id": "681d6c3d3629b02d74b175e8",
@@ -608,12 +597,12 @@
     "id": "6819353a3629b02d74b16fab",
     "username": "Nonlinear",
     "branch": "nmp-save-nullvalue",
-    "llr": -1.33648521492308,
-    "wml": 122,
-    "wins": 29100,
-    "losses": 28978,
-    "draws": 55826,
-    "totalGames": 113904
+    "llr": -1.2929806127149492,
+    "wml": 126,
+    "wins": 29163,
+    "losses": 29037,
+    "draws": 55926,
+    "totalGames": 114126
   },
   {
     "id": "6813c1ea3629b02d74b16a63",
@@ -627,15 +616,26 @@
     "totalGames": 98592
   },
   {
+    "id": "6820e6e53629b02d74b178cb",
+    "username": "Nonlinear",
+    "branch": "nmp-save-nullvalue-2",
+    "llr": -1.354932698851825,
+    "wml": -13,
+    "wins": 18872,
+    "losses": 18885,
+    "draws": 35171,
+    "totalGames": 72928
+  },
+  {
     "id": "681e86a93629b02d74b17709",
     "username": "sg",
     "branch": "good_cap_margin_g",
-    "llr": -1.3706854818641625,
-    "wml": 51,
-    "wins": 30407,
-    "losses": 30356,
-    "draws": 56645,
-    "totalGames": 117408
+    "llr": -1.502094384033283,
+    "wml": 40,
+    "wins": 30515,
+    "losses": 30475,
+    "draws": 56866,
+    "totalGames": 117856
   },
   {
     "id": "6818e34c3629b02d74b16f4c",
@@ -649,26 +649,15 @@
     "totalGames": 11584
   },
   {
-    "id": "681d40503629b02d74b175bb",
-    "username": "Vizvezdenec",
-    "branch": "contLphFFF5",
-    "llr": -1.7035708103503437,
-    "wml": 10,
-    "wins": 18847,
-    "losses": 18837,
-    "draws": 35804,
-    "totalGames": 73488
-  },
-  {
     "id": "681ca4283629b02d74b1747d",
     "username": "tsoj",
     "branch": "do_see_pruning_based_on_lmr_depth_without_history_LLM_generated_patch",
-    "llr": -1.731897558902321,
-    "wml": 130,
-    "wins": 34204,
-    "losses": 34074,
-    "draws": 65504,
-    "totalGames": 133782
+    "llr": -1.6786120441306178,
+    "wml": 135,
+    "wins": 34281,
+    "losses": 34146,
+    "draws": 65679,
+    "totalGames": 134106
   },
   {
     "id": "6818bf9c3629b02d74b16f29",
@@ -680,6 +669,17 @@
     "losses": 4458,
     "draws": 8112,
     "totalGames": 16896
+  },
+  {
+    "id": "681d40503629b02d74b175bb",
+    "username": "Vizvezdenec",
+    "branch": "contLphFFF5",
+    "llr": -1.8949577493576548,
+    "wml": -5,
+    "wins": 18910,
+    "losses": 18915,
+    "draws": 35951,
+    "totalGames": 73776
   },
   {
     "id": "681df06b3629b02d74b1767a",
@@ -704,17 +704,6 @@
     "totalGames": 42560
   },
   {
-    "id": "6820f76c3629b02d74b178ec",
-    "username": "TarasVuk",
-    "branch": "movepick_recapture",
-    "llr": -1.9930353603795166,
-    "wml": -69,
-    "wins": 18885,
-    "losses": 18954,
-    "draws": 35377,
-    "totalGames": 73216
-  },
-  {
     "id": "68122b423629b02d74b168d7",
     "username": "Fisherman",
     "branch": "GBQuiets2",
@@ -724,6 +713,17 @@
     "losses": 13467,
     "draws": 25200,
     "totalGames": 52032
+  },
+  {
+    "id": "6820f76c3629b02d74b178ec",
+    "username": "TarasVuk",
+    "branch": "movepick_recapture",
+    "llr": -2.035836704549251,
+    "wml": -72,
+    "wins": 19019,
+    "losses": 19091,
+    "draws": 35650,
+    "totalGames": 73760
   },
   {
     "id": "681e417f3629b02d74b176ba",
@@ -740,12 +740,12 @@
     "id": "681c8ebb3629b02d74b17449",
     "username": "Vizvezdenec",
     "branch": "corrSqR3",
-    "llr": -2.2034277098832122,
-    "wml": 40,
-    "wins": 41521,
-    "losses": 41481,
-    "draws": 77254,
-    "totalGames": 160256
+    "llr": -2.16781223044702,
+    "wml": 44,
+    "wins": 41674,
+    "losses": 41630,
+    "draws": 77528,
+    "totalGames": 160832
   },
   {
     "id": "681a5a233629b02d74b170f5",
@@ -773,34 +773,23 @@
     "id": "682151a13629b02d74b1796e",
     "username": "Fisherman",
     "branch": "GBQuiets3",
-    "llr": -2.546836274423975,
-    "wml": -115,
-    "wins": 19572,
-    "losses": 19687,
-    "draws": 36517,
-    "totalGames": 75776
-  },
-  {
-    "id": "68214f823629b02d74b17968",
-    "username": "somelizard",
-    "branch": "ft_mulhrs_2",
-    "llr": -2.8140038538363377,
-    "wml": -97,
-    "wins": 27048,
-    "losses": 27145,
-    "draws": 49871,
-    "totalGames": 104064
+    "llr": -2.339732713302079,
+    "wml": -96,
+    "wins": 19681,
+    "losses": 19777,
+    "draws": 36702,
+    "totalGames": 76160
   },
   {
     "id": "680e7e823629b02d74b15e1a",
     "username": "fauzi2",
     "branch": "wave2",
     "llr": null,
-    "wml": -151,
-    "wins": 43319,
-    "losses": 43470,
-    "draws": 80751,
-    "totalGames": 167540
+    "wml": -153,
+    "wins": 43349,
+    "losses": 43502,
+    "draws": 80801,
+    "totalGames": 167652
   },
   {
     "id": "6816832d3629b02d74b16d21",
@@ -818,10 +807,10 @@
     "username": "fauzi2",
     "branch": "uchi",
     "llr": null,
-    "wml": -97,
-    "wins": 7872,
-    "losses": 7969,
-    "draws": 15351,
-    "totalGames": 31192
+    "wml": -101,
+    "wins": 7886,
+    "losses": 7987,
+    "draws": 15373,
+    "totalGames": 31246
   }
 ]
