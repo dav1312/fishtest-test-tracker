@@ -71,16 +71,8 @@ tbody tr:nth-child(even) {
 
 td a {
     color: #007bff;
-}
-
-.username-filter-link {
-    color: #007bff;
     text-decoration: none;
     cursor: pointer;
-}
-
-.username-filter-link:hover {
-    text-decoration: underline;
 }
 
 .branch-name-content {
@@ -99,13 +91,6 @@ td a {
     overflow: hidden;
     text-overflow: ellipsis;
     vertical-align: middle;
-    color: #007bff;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.branch-link:hover {
-    text-decoration: underline;
 }
 
 #chartContainer {
