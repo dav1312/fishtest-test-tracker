@@ -146,6 +146,14 @@ function initializeChart(testId, branchName) {
             labels: [],
             datasets: [
                 {
+                    label: 'Wins - Losses',
+                    data: [],
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1,
+                    // Set initial hidden state based on currentVisibleMetric
+                    hidden: currentVisibleMetric !== 'wml'
+                },
+                {
                     label: 'LLR',
                     data: [],
                     borderColor: 'rgb(255, 99, 132)',
@@ -153,14 +161,6 @@ function initializeChart(testId, branchName) {
                     // Set initial hidden state based on currentVisibleMetric
                     hidden: currentVisibleMetric !== 'llr',
                     yAxisID: 'y'
-                },
-                {
-                    label: 'Wins - Losses',
-                    data: [],
-                    borderColor: 'rgb(75, 192, 192)',
-                    tension: 0.1,
-                    // Set initial hidden state based on currentVisibleMetric
-                    hidden: currentVisibleMetric !== 'wml'
                 }
             ]
         },
