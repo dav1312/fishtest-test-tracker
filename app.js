@@ -21,6 +21,25 @@ let currentTrackingTestId = null; // Track which chart is visible
 let currentTrackingBranchName = null;
 let currentVisibleMetric = 'llr';
 
+const LLR_BOUND = 2.94443897916644;
+
+function formatLLR(llrValue) {
+    if (llrValue === null || typeof llrValue === 'undefined') {
+        return 'N/A';
+    }
+
+    // Round LLR to 2 decimal places, always show 2 decimals
+    const formattedLLR = llrValue.toFixed(2);
+
+    // Calculate percentage
+    let percentage = (llrValue / LLR_BOUND) * 100;
+    // Clamp percentage between -100% and 100%
+    percentage = Math.max(-100, Math.min(100, percentage));
+    const roundedPercentage = Math.round(percentage);
+
+    return `${formattedLLR} (${roundedPercentage}%)`;
+}
+
 // --- Utility function to format time ago ---
 function formatTimeAgo(timestampSeconds) {
     if (!timestampSeconds) return "N/A";
@@ -124,6 +143,10 @@ function renderTable(testsToRender) {
     testsToRender.forEach(test => {
         const row = testsTableBody.insertRow();
 
+        if (test.workers === 0) {
+            row.classList.add('dimmed-row');
+        }
+
         // Test ID Cell
         const idCell = row.insertCell();
         const idLink = document.createElement('a');
@@ -154,7 +177,10 @@ function renderTable(testsToRender) {
         branchLink.dataset.branchName = test.branch;
         branchCell.appendChild(branchLink);
 
-        row.insertCell().textContent = test.llr !== null ? test.llr.toFixed(5) : 'N/A';
+        // LLR Cell
+        row.insertCell().textContent = formatLLR(test.llr);
+
+        // Total Games Cell
         row.insertCell().textContent = test.totalGames;
     });
 }

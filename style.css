@@ -42,9 +42,13 @@ table {
 }
 
 th, td {
-    padding: 12px;
+    padding: 0.3rem;
     border: 1px solid #ddd;
     text-align: left;
+}
+
+.dimmed-row {
+    opacity: 0.6;
 }
 
 th {

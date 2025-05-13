@@ -56,6 +56,7 @@ function processRawData(rawData) {
         const losses = parseInt(test.results?.losses) || 0;
         const draws = parseInt(test.results?.draws) || 0;
         const totalGames = wins + losses + draws;
+        const workers = parseInt(test.workers) || 0;
 
         processedTests.push({
             id: test._id,
@@ -66,7 +67,8 @@ function processRawData(rawData) {
             wins: wins,
             losses: losses,
             draws: draws,
-            totalGames: totalGames
+            totalGames: totalGames,
+            workers: workers
         });
     }
     // Sort by LLR descending immediately after processing
