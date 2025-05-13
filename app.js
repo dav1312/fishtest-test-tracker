@@ -143,8 +143,19 @@ function renderTable(testsToRender) {
     testsToRender.forEach(test => {
         const row = testsTableBody.insertRow();
 
+        // Apply dimming if workers count is 0, i.e., test is paused
         if (test.workers === 0) {
             row.classList.add('dimmed-row');
+        }
+
+        // Apply background color based on sprtElo0's existence and value
+        // If sprtElo0 is not null, we assume it's an SPRT test with elo0 data
+        if (test.sprtElo0 !== null) { // Check if sprtElo0 has a valid numeric value
+            if (test.sprtElo0 < 0) {
+                row.style.backgroundColor = 'rgb(80 200 229 / 30%)'; // Simplification
+            } else {
+                row.style.backgroundColor = 'rgb(117 187 118 / 30%)'; // Gainer
+            }
         }
 
         // Test ID Cell

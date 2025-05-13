@@ -50,25 +50,37 @@ function processRawData(rawData) {
     const processedTests = [];
     for (const id in rawData) {
         const test = rawData[id];
-        // Use optional chaining and nullish coalescing for safety
-        const llr = test.args?.sprt?.llr ?? null; // Already a number or null
+        const args = test.args || {}; // Ensure args exists
+
+        const llr = args.sprt?.llr ?? null; // LLR from sprt object if it exists
         const wins = parseInt(test.results?.wins) || 0;
         const losses = parseInt(test.results?.losses) || 0;
         const draws = parseInt(test.results?.draws) || 0;
         const totalGames = wins + losses + draws;
         const workers = parseInt(test.workers) || 0;
 
+        // Get sprtElo0 if sprt object and elo0 property exist
+        let sprtElo0 = null;
+        if (args.sprt && typeof args.sprt.elo0 !== 'undefined') {
+            sprtElo0 = parseFloat(args.sprt.elo0);
+            // If parseFloat results in NaN (e.g., for non-numeric input), set to null
+            if (isNaN(sprtElo0)) {
+                sprtElo0 = null;
+            }
+        }
+
         processedTests.push({
             id: test._id,
-            username: test.args?.username ?? 'N/A',
-            branch: test.args?.new_tag ?? 'N/A',
+            username: args.username ?? 'N/A',
+            branch: args.new_tag ?? 'N/A',
             llr: llr !== null ? parseFloat(llr) : null, // Ensure numeric or null
             wml: wins - losses,
             wins: wins,
             losses: losses,
             draws: draws,
             totalGames: totalGames,
-            workers: workers
+            workers: workers,
+            sprtElo0: sprtElo0
         });
     }
     // Sort by LLR descending immediately after processing
