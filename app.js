@@ -9,7 +9,7 @@ const testsTableBody = document.querySelector('#testsTable tbody');
 const chartContainer = document.getElementById('chartContainer');
 const chartTitle = document.getElementById('chartTitle');
 const progressChartCanvas = document.getElementById('progressChart');
-const toggleWMLButton = document.getElementById('toggleWML');
+const toggleScoreButton = document.getElementById('toggleScore');
 const toggleLLRButton = document.getElementById('toggleLLR');
 const testEndedMessage = document.getElementById('testEndedMessage');
 const lastUpdateTimeElement = document.getElementById('lastUpdateTime');
@@ -146,6 +146,9 @@ function renderTable(testsToRender) {
         // Calculate totalGames for display
         const totalGames = (test.wins || 0) + (test.losses || 0) + (test.draws || 0);
 
+        // Calculate score for display
+        const score = (test.wins || 0) - (test.losses || 0);
+
         // Apply dimming if workers count is 0, i.e., test is paused
         if (test.workers === 0) {
             row.classList.add('dimmed-row');
@@ -195,7 +198,7 @@ function renderTable(testsToRender) {
         row.insertCell().textContent = formatLLR(test.llr);
 
         // Total Games Cell
-        row.insertCell().textContent = totalGames;
+        row.insertCell().textContent = `${totalGames} (${score})`;
     });
 }
 
@@ -232,7 +235,7 @@ function initializeChart(testId, branchName) {
 
     // Default Y-axis options, will be overridden by toggleChartMetric if needed
     let initialYAxisOptions = {
-         beginAtZero: true, // WML default
+         beginAtZero: true, // Score default
          title: { display: true, text: 'Value' }
     };
 
@@ -255,12 +258,12 @@ function initializeChart(testId, branchName) {
             labels: [],
             datasets: [
                 {
-                    label: 'Wins - Losses',
+                    label: 'Score',
                     data: [],
                     borderColor: 'rgb(75, 192, 192)',
                     tension: 0.1,
                     // Set initial hidden state based on currentVisibleMetric
-                    hidden: currentVisibleMetric !== 'wml'
+                    hidden: currentVisibleMetric !== 'score'
                 },
                 {
                     label: 'LLR',
@@ -322,10 +325,10 @@ function updateChartData() {
     }
 
     // Format data for Chart.js time scale: {x: timestamp, y: value}
-    const wmlData = testHistory.map(d => ({ x: d.time * 1000, y: d.wml })); // Convert seconds to ms
+    const scoreData = testHistory.map(d => ({ x: d.time * 1000, y: d.score })); // Convert seconds to ms
     const llrData = testHistory.map(d => ({ x: d.time * 1000, y: d.llr !== null ? d.llr : NaN })); // Handle nulls
 
-    currentChart.data.datasets[0].data = wmlData;
+    currentChart.data.datasets[0].data = scoreData;
     currentChart.data.datasets[1].data = llrData;
 
     // Check again if the test is active based on the loaded latest data
@@ -395,7 +398,7 @@ testsTableBody.addEventListener('click', (event) => {
     handleBranchClick(event);         // Handle branch clicks for charts
     handleUsernameFilterClick(event); // Handle username clicks for filtering
 });
-toggleWMLButton.addEventListener('click', () => toggleChartMetric('wml'));
+toggleScoreButton.addEventListener('click', () => toggleChartMetric('score'));
 toggleLLRButton.addEventListener('click', () => toggleChartMetric('llr'));
 
 // --- Initial Load ---

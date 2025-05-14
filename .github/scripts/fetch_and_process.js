@@ -103,16 +103,16 @@ async function updateHistoricalData(currentHistory, latestProcessedTests) {
 
         const testHistory = currentHistory[test.id];
         const lastEntry = testHistory[testHistory.length - 1];
-        const currentWml = test.wins - test.losses;
+        const currentScore = test.wins - test.losses;
         const newPoint = {
             // Use timestamp for better time representation
             time: Math.floor(Date.now() / 1000), // Unix timestamp (seconds)
-            wml: currentWml,
+            score: currentScore,
             llr: test.llr
         };
 
         // Add point only if it differs from the last one or if history is empty
-        if (!lastEntry || lastEntry.wml !== newPoint.wml || lastEntry.llr !== newPoint.llr) {
+        if (!lastEntry || lastEntry.score !== newPoint.score || lastEntry.llr !== newPoint.llr) {
             testHistory.push(newPoint);
             historyChanged = true;
 
