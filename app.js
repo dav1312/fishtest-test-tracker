@@ -146,8 +146,10 @@ function renderTable(testsToRender) {
         // Calculate totalGames for display
         const totalGames = (test.wins || 0) + (test.losses || 0) + (test.draws || 0);
 
-        // Calculate score for display
-        const score = (test.wins || 0) - (test.losses || 0);
+        // Calculate the score % for display
+        let score = ((test.wins || 0) + (test.draws || 0) / 2) / totalGames * 100 || 0;
+        // Format score to 2 decimal places
+        score = score.toFixed(2);
 
         // Apply dimming if workers count is 0, i.e., test is paused
         if (test.workers === 0) {
@@ -198,7 +200,7 @@ function renderTable(testsToRender) {
         row.insertCell().textContent = formatLLR(test.llr);
 
         // Total Games Cell
-        row.insertCell().textContent = `${totalGames} (${score})`;
+        row.insertCell().textContent = `${totalGames} (${score}%)`;
     });
 }
 
