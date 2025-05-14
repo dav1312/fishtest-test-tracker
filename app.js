@@ -143,6 +143,9 @@ function renderTable(testsToRender) {
     testsToRender.forEach(test => {
         const row = testsTableBody.insertRow();
 
+        // Calculate totalGames for display
+        const totalGames = (test.wins || 0) + (test.losses || 0) + (test.draws || 0);
+
         // Apply dimming if workers count is 0, i.e., test is paused
         if (test.workers === 0) {
             row.classList.add('dimmed-row');
@@ -192,7 +195,7 @@ function renderTable(testsToRender) {
         row.insertCell().textContent = formatLLR(test.llr);
 
         // Total Games Cell
-        row.insertCell().textContent = test.totalGames;
+        row.insertCell().textContent = totalGames;
     });
 }
 

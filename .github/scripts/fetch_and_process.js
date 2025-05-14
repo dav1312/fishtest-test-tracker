@@ -56,7 +56,6 @@ function processRawData(rawData) {
         const wins = parseInt(test.results?.wins) || 0;
         const losses = parseInt(test.results?.losses) || 0;
         const draws = parseInt(test.results?.draws) || 0;
-        const totalGames = wins + losses + draws;
         const workers = parseInt(test.workers) || 0;
 
         // Get sprtElo0 if sprt object and elo0 property exist
@@ -74,11 +73,9 @@ function processRawData(rawData) {
             username: args.username ?? 'N/A',
             branch: args.new_tag ?? 'N/A',
             llr: llr !== null ? parseFloat(llr) : null, // Ensure numeric or null
-            wml: wins - losses,
             wins: wins,
             losses: losses,
             draws: draws,
-            totalGames: totalGames,
             workers: workers,
             sprtElo0: sprtElo0
         });
@@ -106,10 +103,11 @@ async function updateHistoricalData(currentHistory, latestProcessedTests) {
 
         const testHistory = currentHistory[test.id];
         const lastEntry = testHistory[testHistory.length - 1];
+        const currentWml = test.wins - test.losses;
         const newPoint = {
             // Use timestamp for better time representation
             time: Math.floor(Date.now() / 1000), // Unix timestamp (seconds)
-            wml: test.wml,
+            wml: currentWml,
             llr: test.llr
         };
 
