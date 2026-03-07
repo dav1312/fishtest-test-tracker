@@ -1,25 +1,25 @@
 [
   {
-    "id": "69a5944e723199f31c425110",
-    "username": "vdv",
-    "branch": "smallNetQuant",
-    "llr": 1.8716551794465603,
-    "wins": 178106,
-    "losses": 178704,
-    "draws": 330614,
-    "workers": 12,
-    "sprtElo0": -1.75
-  },
-  {
     "id": "69ab5993cb31ee884aed629d",
     "username": "ZlomenyMesic",
     "branch": "follow-pv-ca",
-    "llr": 1.5446541166522547,
-    "wins": 14322,
-    "losses": 14080,
-    "draws": 27356,
-    "workers": 14,
+    "llr": 1.879122665724682,
+    "wins": 14527,
+    "losses": 14256,
+    "draws": 27677,
+    "workers": 11,
     "sprtElo0": 0.5
+  },
+  {
+    "id": "69a5944e723199f31c425110",
+    "username": "vdv",
+    "branch": "smallNetQuant",
+    "llr": 1.169317951649812,
+    "wins": 178783,
+    "losses": 179447,
+    "draws": 331946,
+    "workers": 13,
+    "sprtElo0": -1.75
   },
   {
     "id": "699b8ca139550e36865438fa",
@@ -36,12 +36,23 @@
     "id": "69a2d7bd9fb1257c48a2c626",
     "username": "fauzi2",
     "branch": "resto3R",
-    "llr": 0.5618550012181887,
-    "wins": 69460,
-    "losses": 68859,
-    "draws": 133157,
-    "workers": 12,
+    "llr": 0.618367802976665,
+    "wins": 69643,
+    "losses": 69036,
+    "draws": 133493,
+    "workers": 13,
     "sprtElo0": 0.5
+  },
+  {
+    "id": "69ac71accfe91e22f157268f",
+    "username": "himetsai",
+    "branch": "PV_depth_reduction",
+    "llr": 0.5690986185304617,
+    "wins": 600,
+    "losses": 545,
+    "draws": 1031,
+    "workers": 3,
+    "sprtElo0": 0
   },
   {
     "id": "69921edbdfa94e08f56f0629",
@@ -66,17 +77,6 @@
     "sprtElo0": 0
   },
   {
-    "id": "69ac71accfe91e22f157268f",
-    "username": "himetsai",
-    "branch": "PV_depth_reduction",
-    "llr": 0.3245057342108086,
-    "wins": 364,
-    "losses": 332,
-    "draws": 616,
-    "workers": 2,
-    "sprtElo0": 0
-  },
-  {
     "id": "69936f65ff782f8eeef611cf",
     "username": "snicolet",
     "branch": "breadcrumbs5",
@@ -86,6 +86,17 @@
     "draws": 22757,
     "workers": 0,
     "sprtElo0": 0
+  },
+  {
+    "id": "69ac397ccfe91e22f157265f",
+    "username": "snicolet",
+    "branch": "no_ds_root",
+    "llr": 0.21633196695942955,
+    "wins": 1518,
+    "losses": 1488,
+    "draws": 2856,
+    "workers": 11,
+    "sprtElo0": 0.5
   },
   {
     "id": "6993901aff782f8eeef612ad",
@@ -124,44 +135,33 @@
     "id": "69ac7db5c26586bbab8c0157",
     "username": "DanSamek",
     "branch": "cutnode_pred_1",
-    "llr": 0,
-    "wins": 0,
-    "losses": 0,
-    "draws": 0,
+    "llr": -0.1801415111942681,
+    "wins": 84,
+    "losses": 98,
+    "draws": 170,
     "workers": 4,
     "sprtElo0": 0
-  },
-  {
-    "id": "69ac397ccfe91e22f157265f",
-    "username": "snicolet",
-    "branch": "no_ds_root",
-    "llr": -0.019519904726439517,
-    "wins": 1459,
-    "losses": 1449,
-    "draws": 2732,
-    "workers": 12,
-    "sprtElo0": 0.5
   },
   {
     "id": "69abe9b0cb31ee884aed636f",
     "username": "Vizvezdenec",
     "branch": "nmpHDDrev5",
-    "llr": -0.13130707262993774,
-    "wins": 5969,
-    "losses": 5947,
-    "draws": 11060,
-    "workers": 4,
+    "llr": -0.1858915841978398,
+    "wins": 6108,
+    "losses": 6090,
+    "draws": 11322,
+    "workers": 3,
     "sprtElo0": 0
   },
   {
-    "id": "69aaba0316112c44d811edef",
-    "username": "DanSamek",
-    "branch": "spi_cn_",
-    "llr": -0.24742119276078262,
-    "wins": 19281,
-    "losses": 19193,
-    "draws": 35926,
-    "workers": 3,
+    "id": "69aa87ccbd35724e4b290477",
+    "username": "Vizvezdenec",
+    "branch": "nmpHDDrev1",
+    "llr": -0.20274559724465865,
+    "wins": 19758,
+    "losses": 19664,
+    "draws": 36386,
+    "workers": 4,
     "sprtElo0": 0
   },
   {
@@ -176,13 +176,24 @@
     "sprtElo0": 0.5
   },
   {
-    "id": "69aa87ccbd35724e4b290477",
-    "username": "Vizvezdenec",
-    "branch": "nmpHDDrev1",
-    "llr": -0.2856364522974429,
-    "wins": 19653,
-    "losses": 19567,
-    "draws": 36172,
+    "id": "69ab76c0cb31ee884aed62d7",
+    "username": "snicolet",
+    "branch": "no_ds_root",
+    "llr": -0.2716880951515316,
+    "wins": 13677,
+    "losses": 13590,
+    "draws": 26199,
+    "workers": 14,
+    "sprtElo0": 0.5
+  },
+  {
+    "id": "69aaba0316112c44d811edef",
+    "username": "DanSamek",
+    "branch": "spi_cn_",
+    "llr": -0.2741284437773412,
+    "wins": 19344,
+    "losses": 19258,
+    "draws": 36022,
     "workers": 3,
     "sprtElo0": 0
   },
@@ -198,47 +209,14 @@
     "sprtElo0": 0
   },
   {
-    "id": "69ab76c0cb31ee884aed62d7",
-    "username": "snicolet",
-    "branch": "no_ds_root",
-    "llr": -0.3991777608153054,
-    "wins": 13477,
-    "losses": 13402,
-    "draws": 25837,
-    "workers": 15,
-    "sprtElo0": 0.5
-  },
-  {
     "id": "69aa7331bd35724e4b29043a",
     "username": "DanSamek",
     "branch": "lpttmh_dext",
-    "llr": -0.44115877600096,
-    "wins": 2802,
-    "losses": 2815,
-    "draws": 5139,
-    "workers": 10,
-    "sprtElo0": 0.5
-  },
-  {
-    "id": "69ac6257cfe91e22f1572684",
-    "username": "DanSamek",
-    "branch": "eabc_1",
-    "llr": -0.5281742141369905,
-    "wins": 1337,
-    "losses": 1376,
-    "draws": 2535,
-    "workers": 3,
-    "sprtElo0": 0
-  },
-  {
-    "id": "69aa489abd35724e4b290413",
-    "username": "AliceRoselia",
-    "branch": "History_higher_order_newnet",
-    "llr": -0.5290485234385759,
-    "wins": 8876,
-    "losses": 8849,
-    "draws": 16811,
-    "workers": 11,
+    "llr": -0.4686637061270464,
+    "wins": 2809,
+    "losses": 2824,
+    "draws": 5157,
+    "workers": 13,
     "sprtElo0": 0.5
   },
   {
@@ -253,25 +231,58 @@
     "sprtElo0": 0
   },
   {
+    "id": "69977f64e2562aa5bc1e09c8",
+    "username": "sg",
+    "branch": "multicut2",
+    "llr": -0.5610696933344476,
+    "wins": 6102,
+    "losses": 6117,
+    "draws": 11493,
+    "workers": 2,
+    "sprtElo0": 0
+  },
+  {
     "id": "69abe917cb31ee884aed636d",
     "username": "Vizvezdenec",
     "branch": "nmpHDDrev4",
-    "llr": -0.5513962154728907,
-    "wins": 4924,
-    "losses": 4945,
-    "draws": 9267,
-    "workers": 6,
+    "llr": -0.5907820859867686,
+    "wins": 5013,
+    "losses": 5037,
+    "draws": 9438,
+    "workers": 4,
     "sprtElo0": 0
+  },
+  {
+    "id": "69aa489abd35724e4b290413",
+    "username": "AliceRoselia",
+    "branch": "History_higher_order_newnet",
+    "llr": -0.6317634134545416,
+    "wins": 8920,
+    "losses": 8901,
+    "draws": 16919,
+    "workers": 14,
+    "sprtElo0": 0.5
   },
   {
     "id": "69ab916ccb31ee884aed62ea",
     "username": "ryan",
     "branch": "finny_icl",
-    "llr": -0.632452271317333,
-    "wins": 29673,
-    "losses": 29564,
-    "draws": 54907,
-    "workers": 4,
+    "llr": -0.633084593063555,
+    "wins": 30051,
+    "losses": 29940,
+    "draws": 55593,
+    "workers": 1,
+    "sprtElo0": 0
+  },
+  {
+    "id": "69ac6257cfe91e22f1572684",
+    "username": "DanSamek",
+    "branch": "eabc_1",
+    "llr": -0.6391225191857307,
+    "wins": 1463,
+    "losses": 1511,
+    "draws": 2786,
+    "workers": 3,
     "sprtElo0": 0
   },
   {
@@ -294,28 +305,6 @@
     "losses": 12586,
     "draws": 23679,
     "workers": 0,
-    "sprtElo0": 0
-  },
-  {
-    "id": "69977f64e2562aa5bc1e09c8",
-    "username": "sg",
-    "branch": "multicut2",
-    "llr": -0.7123729827208621,
-    "wins": 5999,
-    "losses": 6028,
-    "draws": 11365,
-    "workers": 3,
-    "sprtElo0": 0
-  },
-  {
-    "id": "69ac0f0ccb31ee884aed6394",
-    "username": "ZlomenyMesic",
-    "branch": "follow-pv-rd",
-    "llr": -0.7430338550771954,
-    "wins": 5453,
-    "losses": 5488,
-    "draws": 10211,
-    "workers": 8,
     "sprtElo0": 0
   },
   {
@@ -352,6 +341,17 @@
     "sprtElo0": 0
   },
   {
+    "id": "69ac0f0ccb31ee884aed6394",
+    "username": "ZlomenyMesic",
+    "branch": "follow-pv-rd",
+    "llr": -0.8342184345159669,
+    "wins": 5646,
+    "losses": 5688,
+    "draws": 10618,
+    "workers": 6,
+    "sprtElo0": 0
+  },
+  {
     "id": "699c9cf939550e3686543a35",
     "username": "sg",
     "branch": "tuned_prior_capture_quiet_order",
@@ -377,32 +377,10 @@
     "id": "69ab4405225486c52973ad76",
     "username": "maximmasiutin",
     "branch": "simplify-contcorr-piecetype",
-    "llr": -0.9024221191393001,
-    "wins": 19088,
-    "losses": 19061,
-    "draws": 35195,
-    "workers": 5,
-    "sprtElo0": 0
-  },
-  {
-    "id": "69ab34e0a047fcd7fc5908b9",
-    "username": "DanSamek",
-    "branch": "se_depth_red_2",
-    "llr": -0.9338317617104249,
-    "wins": 11526,
-    "losses": 11543,
-    "draws": 21731,
-    "workers": 3,
-    "sprtElo0": 0
-  },
-  {
-    "id": "6997bc1e742628af3a802bad",
-    "username": "sg",
-    "branch": "multicut4",
-    "llr": -0.9724979606768057,
-    "wins": 6592,
-    "losses": 6641,
-    "draws": 12431,
+    "llr": -0.9793064760153489,
+    "wins": 19194,
+    "losses": 19173,
+    "draws": 35425,
     "workers": 5,
     "sprtElo0": 0
   },
@@ -418,17 +396,6 @@
     "sprtElo0": 0
   },
   {
-    "id": "69abec23cb31ee884aed637c",
-    "username": "shawnxu",
-    "branch": "test1653",
-    "llr": -1.0171111295871724,
-    "wins": 8759,
-    "losses": 8800,
-    "draws": 16265,
-    "workers": 5,
-    "sprtElo0": 0
-  },
-  {
     "id": "699447acd8505a30b5ede6c7",
     "username": "sg",
     "branch": "razor3b",
@@ -440,14 +407,25 @@
     "sprtElo0": 0
   },
   {
-    "id": "699f3d3c2be03365d5073c32",
+    "id": "6997bc1e742628af3a802bad",
     "username": "sg",
-    "branch": "tuned_node_type_quiet_order",
-    "llr": -1.1308304236184432,
-    "wins": 3279,
-    "losses": 3362,
-    "draws": 6191,
+    "branch": "multicut4",
+    "llr": -1.06591785203999,
+    "wins": 6658,
+    "losses": 6715,
+    "draws": 12547,
     "workers": 1,
+    "sprtElo0": 0
+  },
+  {
+    "id": "69ab34e0a047fcd7fc5908b9",
+    "username": "DanSamek",
+    "branch": "se_depth_red_2",
+    "llr": -1.1419011133796733,
+    "wins": 11602,
+    "losses": 11637,
+    "draws": 21881,
+    "workers": 3,
     "sprtElo0": 0
   },
   {
@@ -459,6 +437,17 @@
     "losses": 5427,
     "draws": 10018,
     "workers": 0,
+    "sprtElo0": 0
+  },
+  {
+    "id": "69abec23cb31ee884aed637c",
+    "username": "shawnxu",
+    "branch": "test1653",
+    "llr": -1.1535859005338172,
+    "wins": 8969,
+    "losses": 9021,
+    "draws": 16666,
+    "workers": 3,
     "sprtElo0": 0
   },
   {
@@ -484,6 +473,17 @@
     "sprtElo0": 0
   },
   {
+    "id": "699f3d3c2be03365d5073c32",
+    "username": "sg",
+    "branch": "tuned_node_type_quiet_order",
+    "llr": -1.2841579665099472,
+    "wins": 3388,
+    "losses": 3484,
+    "draws": 6440,
+    "workers": 2,
+    "sprtElo0": 0
+  },
+  {
     "id": "699464bb86e4a32314116240",
     "username": "sg",
     "branch": "razor4a",
@@ -492,28 +492,6 @@
     "losses": 18354,
     "draws": 34598,
     "workers": 0,
-    "sprtElo0": 0
-  },
-  {
-    "id": "6997fe83742628af3a802be9",
-    "username": "sg",
-    "branch": "multicut6",
-    "llr": -1.3317861933691106,
-    "wins": 7536,
-    "losses": 7611,
-    "draws": 13877,
-    "workers": 5,
-    "sprtElo0": 0
-  },
-  {
-    "id": "69aa8838bd35724e4b29047b",
-    "username": "Vizvezdenec",
-    "branch": "nmpHDDrev2",
-    "llr": -1.393629981363822,
-    "wins": 19883,
-    "losses": 19893,
-    "draws": 37504,
-    "workers": 4,
     "sprtElo0": 0
   },
   {
@@ -528,13 +506,13 @@
     "sprtElo0": 0
   },
   {
-    "id": "699471ac86e4a32314116261",
-    "username": "sg",
-    "branch": "razor_depth",
-    "llr": -1.4101284079474943,
-    "wins": 11738,
-    "losses": 11797,
-    "draws": 21617,
+    "id": "69ab4b91cb31ee884aed6274",
+    "username": "AliceRoselia",
+    "branch": "History_higher_order_newnet",
+    "llr": -1.4104352189120735,
+    "wins": 6088,
+    "losses": 6174,
+    "draws": 11570,
     "workers": 5,
     "sprtElo0": 0
   },
@@ -550,48 +528,48 @@
     "sprtElo0": 0
   },
   {
-    "id": "69ab4b91cb31ee884aed6274",
-    "username": "AliceRoselia",
-    "branch": "History_higher_order_newnet",
-    "llr": -1.4433024382506685,
-    "wins": 6043,
-    "losses": 6132,
-    "draws": 11473,
-    "workers": 6,
-    "sprtElo0": 0
-  },
-  {
-    "id": "69aac20016112c44d811edf3",
-    "username": "DanSamek",
-    "branch": "se_depth_red",
-    "llr": -1.4507352494687322,
-    "wins": 18080,
-    "losses": 18107,
-    "draws": 33061,
-    "workers": 4,
-    "sprtElo0": 0
-  },
-  {
-    "id": "699b21bb8dfc1685b27eed7b",
+    "id": "699471ac86e4a32314116261",
     "username": "sg",
-    "branch": "tweak_quiet_order4",
-    "llr": -1.5121218212585232,
-    "wins": 25213,
-    "losses": 25204,
-    "draws": 46895,
-    "workers": 4,
-    "sprtElo0": 0
-  },
-  {
-    "id": "69ab55bccb31ee884aed6294",
-    "username": "Fisherman",
-    "branch": "ThreatNoDefend",
-    "llr": -1.5178550083445144,
-    "wins": 11827,
-    "losses": 11895,
-    "draws": 21814,
+    "branch": "razor_depth",
+    "llr": -1.4495356606272325,
+    "wins": 11820,
+    "losses": 11882,
+    "draws": 21770,
     "workers": 5,
     "sprtElo0": 0
+  },
+  {
+    "id": "69aa8838bd35724e4b29047b",
+    "username": "Vizvezdenec",
+    "branch": "nmpHDDrev2",
+    "llr": -1.4674309575240074,
+    "wins": 19970,
+    "losses": 19986,
+    "draws": 37676,
+    "workers": 3,
+    "sprtElo0": 0
+  },
+  {
+    "id": "6997fe83742628af3a802be9",
+    "username": "sg",
+    "branch": "multicut6",
+    "llr": -1.497833874773798,
+    "wins": 7628,
+    "losses": 7717,
+    "draws": 14095,
+    "workers": 3,
+    "sprtElo0": 0
+  },
+  {
+    "id": "69a9bc2089704e42c5e3a339",
+    "username": "fauzi2",
+    "branch": "simpr5a",
+    "llr": -1.5860558319672629,
+    "wins": 19043,
+    "losses": 19251,
+    "draws": 37348,
+    "workers": 5,
+    "sprtElo0": -1.75
   },
   {
     "id": "69a66aa0c2e225a1d52b48ed",
@@ -602,6 +580,17 @@
     "losses": 21057,
     "draws": 39187,
     "workers": 0,
+    "sprtElo0": 0
+  },
+  {
+    "id": "69ab55bccb31ee884aed6294",
+    "username": "Fisherman",
+    "branch": "ThreatNoDefend",
+    "llr": -1.6040200472045008,
+    "wins": 11941,
+    "losses": 12016,
+    "draws": 22059,
+    "workers": 4,
     "sprtElo0": 0
   },
   {
@@ -616,25 +605,36 @@
     "sprtElo0": 0
   },
   {
-    "id": "69a9bc2089704e42c5e3a339",
-    "username": "fauzi2",
-    "branch": "simpr5a",
-    "llr": -1.664757802229642,
-    "wins": 18908,
-    "losses": 19122,
-    "draws": 37102,
-    "workers": 4,
-    "sprtElo0": -1.75
-  },
-  {
     "id": "69ab8760cb31ee884aed62de",
     "username": "Fisherman",
     "branch": "ThreatNoDefend",
-    "llr": -1.6792505936270177,
-    "wins": 10672,
-    "losses": 10761,
-    "draws": 19655,
-    "workers": 4,
+    "llr": -1.6736663905245546,
+    "wins": 10765,
+    "losses": 10853,
+    "draws": 19822,
+    "workers": 3,
+    "sprtElo0": 0
+  },
+  {
+    "id": "69aac20016112c44d811edf3",
+    "username": "DanSamek",
+    "branch": "se_depth_red",
+    "llr": -1.7025730166626292,
+    "wins": 18142,
+    "losses": 18191,
+    "draws": 33203,
+    "workers": 3,
+    "sprtElo0": 0
+  },
+  {
+    "id": "699b21bb8dfc1685b27eed7b",
+    "username": "sg",
+    "branch": "tweak_quiet_order4",
+    "llr": -1.7070991309555308,
+    "wins": 25297,
+    "losses": 25305,
+    "draws": 47062,
+    "workers": 3,
     "sprtElo0": 0
   },
   {
@@ -652,33 +652,33 @@
     "id": "69aa8891bd35724e4b29047d",
     "username": "Vizvezdenec",
     "branch": "nmpHDDrev3",
-    "llr": -1.8093082599038155,
-    "wins": 19128,
-    "losses": 19180,
-    "draws": 35932,
-    "workers": 4,
-    "sprtElo0": 0
-  },
-  {
-    "id": "69a90570fac54339cf435bed",
-    "username": "sg",
-    "branch": "history_size",
-    "llr": -1.889176731884474,
-    "wins": 27612,
-    "losses": 27622,
-    "draws": 51678,
-    "workers": 2,
+    "llr": -1.9168627908741518,
+    "wins": 19243,
+    "losses": 19304,
+    "draws": 36141,
+    "workers": 5,
     "sprtElo0": 0
   },
   {
     "id": "69ab97c5cb31ee884aed62f3",
     "username": "himetsai",
     "branch": "nmp_dynamic_depth_reduction",
-    "llr": -1.9549537894126738,
-    "wins": 13187,
-    "losses": 13285,
-    "draws": 24888,
-    "workers": 4,
+    "llr": -1.9421450056090224,
+    "wins": 13335,
+    "losses": 13431,
+    "draws": 25170,
+    "workers": 5,
+    "sprtElo0": 0
+  },
+  {
+    "id": "69a90570fac54339cf435bed",
+    "username": "sg",
+    "branch": "history_size",
+    "llr": -1.9759046137847038,
+    "wins": 27669,
+    "losses": 27686,
+    "draws": 51813,
+    "workers": 2,
     "sprtElo0": 0
   },
   {
@@ -696,10 +696,10 @@
     "id": "69a8e874fac54339cf435bd4",
     "username": "Fisherman",
     "branch": "compress-indexingNoSwap",
-    "llr": -2.342397271515444,
-    "wins": 40701,
-    "losses": 41071,
-    "draws": 76340,
+    "llr": -2.303132558703831,
+    "wins": 40788,
+    "losses": 41155,
+    "draws": 76489,
     "workers": 2,
     "sprtElo0": -1.75
   },
@@ -719,10 +719,10 @@
     "username": "willm",
     "branch": "async-heuristics-spsa",
     "llr": null,
-    "wins": 9805,
-    "losses": 9903,
-    "draws": 18362,
-    "workers": 5,
+    "wins": 10089,
+    "losses": 10198,
+    "draws": 18883,
+    "workers": 4,
     "sprtElo0": null
   },
   {
@@ -730,10 +730,10 @@
     "username": "lemtea",
     "branch": "ttpv-do-deeper-tune",
     "llr": null,
-    "wins": 4309,
-    "losses": 4330,
-    "draws": 8241,
-    "workers": 3,
+    "wins": 4371,
+    "losses": 4395,
+    "draws": 8370,
+    "workers": 8,
     "sprtElo0": null
   },
   {
@@ -741,9 +741,9 @@
     "username": "xoto",
     "branch": "hogging2",
     "llr": null,
-    "wins": 2087,
-    "losses": 2116,
-    "draws": 3791,
+    "wins": 2195,
+    "losses": 2228,
+    "draws": 4021,
     "workers": 6,
     "sprtElo0": null
   }
