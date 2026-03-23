@@ -1,6 +1,5 @@
-import { readFile, writeFile, mkdir } from 'node:fs/promises';
-import path from 'node:path';
-import { styleText } from 'node:util';
+import { readFile, writeFile, mkdir } from 'fs/promises';
+import path from 'path';
 
 const API_URL = 'https://tests.stockfishchess.org/api/active_runs';
 const LATEST_DATA_PATH = path.resolve(process.cwd(), 'latest_data.json'); // Save in repo root
@@ -13,10 +12,10 @@ async function loadJson(filePath, defaultValue) {
         return JSON.parse(data);
     } catch (error) {
         if (error.code === 'ENOENT') {
-            console.log(styleText('yellow', `File not found: ${filePath}. Returning default.`));
+            console.log(`File not found: ${filePath}. Returning default.`);
             return defaultValue;
         }
-        console.error(styleText('red', `Error reading JSON from ${filePath}:`), error);
+        console.error(`Error reading JSON from ${filePath}:`, error);
         throw error; // Re-throw other errors
     }
 }
@@ -27,9 +26,9 @@ async function saveJson(filePath, data) {
         // Ensure directory exists (useful for first run or complex paths)
         await mkdir(dir, { recursive: true });
         await writeFile(filePath, JSON.stringify(data, null, 2), 'utf-8'); // Pretty print JSON
-        console.log(styleText('green', `Successfully saved data to ${filePath}`));
+        console.log(`Successfully saved data to ${filePath}`);
     } catch (error) {
-        console.error(styleText('red', `Error writing JSON to ${filePath}:`), error);
+        console.error(`Error writing JSON to ${filePath}:`, error);
         throw error;
     }
 }
@@ -42,48 +41,56 @@ async function fetchFishtestData() {
         }
         return await response.json();
     } catch (error) {
-        console.error(styleText('red', "Error fetching Fishtest API:"), error);
+        console.error("Error fetching Fishtest API:", error);
         throw error; // Stop execution if API fetch fails
     }
 }
 
 function processRawData(rawData) {
-    // Replaced 'for...in' with Object.values().map() for functional purity
-    const processedTests = Object.values(rawData).map(test => {
-        const args = test.args ?? {}; // Ensure args exists
+    const processedTests = [];
+    for (const id in rawData) {
+        const test = rawData[id];
+        const args = test.args || {}; // Ensure args exists
+
         const llr = args.sprt?.llr ?? null; // LLR from sprt object if it exists
+        const wins = parseInt(test.results?.wins) || 0;
+        const losses = parseInt(test.results?.losses) || 0;
+        const draws = parseInt(test.results?.draws) || 0;
+        const workers = parseInt(test.workers) || 0;
 
         // Get sprtElo0 if sprt object and elo0 property exist
-        let sprtElo0 = args.sprt?.elo0 ? parseFloat(args.sprt.elo0) : null;
-
-        // If parseFloat results in NaN (e.g., for non-numeric input), set to null
-        if (Number.isNaN(sprtElo0)) {
-            sprtElo0 = null;
+        let sprtElo0 = null;
+        if (args.sprt && typeof args.sprt.elo0 !== 'undefined') {
+            sprtElo0 = parseFloat(args.sprt.elo0);
+            // If parseFloat results in NaN (e.g., for non-numeric input), set to null
+            if (isNaN(sprtElo0)) {
+                sprtElo0 = null;
+            }
         }
 
-        return {
+        processedTests.push({
             id: test._id,
             username: args.username ?? 'N/A',
             branch: args.new_tag ?? 'N/A',
             llr: llr !== null ? parseFloat(llr) : null, // Ensure numeric or null
-            wins: parseInt(test.results?.wins) || 0,
-            losses: parseInt(test.results?.losses) || 0,
-            draws: parseInt(test.results?.draws) || 0,
-            workers: parseInt(test.workers) || 0,
-            sprtElo0
-        };
-    });
-
+            wins: wins,
+            losses: losses,
+            draws: draws,
+            workers: workers,
+            sprtElo0: sprtElo0
+        });
+    }
     // Sort by LLR descending immediately after processing
-    return processedTests.toSorted((a, b) => {
+    processedTests.sort((a, b) => {
         if (a.llr === null && b.llr === null) return 0;
         if (a.llr === null) return 1;
         if (b.llr === null) return -1;
         return b.llr - a.llr;
     });
+    return processedTests;
 }
 
-function updateHistoricalData(currentHistory, latestProcessedTests) {
+async function updateHistoricalData(currentHistory, latestProcessedTests) {
     let historyChanged = false;
     const activeTestIds = new Set(latestProcessedTests.map(t => t.id));
 
@@ -95,7 +102,7 @@ function updateHistoricalData(currentHistory, latestProcessedTests) {
         }
 
         const testHistory = currentHistory[test.id];
-        const lastEntry = testHistory.at(-1);
+        const lastEntry = testHistory[testHistory.length - 1];
         const currentScore = test.wins - test.losses;
         const newPoint = {
             // Use timestamp for better time representation
@@ -118,9 +125,9 @@ function updateHistoricalData(currentHistory, latestProcessedTests) {
     });
 
     // Cleanup history for tests that are no longer active
-    for (const testId of Object.keys(currentHistory)) {
+    for (const testId in currentHistory) {
         if (!activeTestIds.has(testId)) {
-            console.log(styleText('gray', `Cleaning up historical data for ended test: ${testId}`));
+            console.log(`Cleaning up historical data for ended test: ${testId}`);
             delete currentHistory[testId];
             historyChanged = true; // History structure changed
         }
@@ -131,8 +138,8 @@ function updateHistoricalData(currentHistory, latestProcessedTests) {
 
 
 // Main Execution Logic
-try {
-    console.log(styleText('cyan', "Starting data update process..."));
+async function main() {
+    console.log("Starting data update process...");
 
     // 1. Load existing historical data (or default to empty object)
     const currentHistory = await loadJson(HISTORY_DATA_PATH, {});
@@ -145,7 +152,7 @@ try {
     console.log(`Fetched and processed ${latestProcessedTests.length} active tests.`);
 
     // 4. Update historical data
-    const { updatedHistory, historyChanged } = updateHistoricalData(currentHistory, latestProcessedTests);
+    const { updatedHistory, historyChanged } = await updateHistoricalData(currentHistory, latestProcessedTests);
 
     // 5. Save the latest processed data (always save this)
     await saveJson(LATEST_DATA_PATH, latestProcessedTests);
@@ -154,12 +161,14 @@ try {
     if (historyChanged) {
         await saveJson(HISTORY_DATA_PATH, updatedHistory);
     } else {
-        console.log(styleText('gray', "Historical data unchanged, skipping save."));
+        console.log("Historical data unchanged, skipping save.");
     }
 
-    console.log(styleText('cyan', "Data update process finished."));
-
-} catch (error) {
-    console.error(styleText('red', "Critical error during script execution:"), error);
-    process.exitCode = 1; // Exit with error code
+    console.log("Data update process finished.");
 }
+
+// Run the main function and handle potential top-level errors
+main().catch(error => {
+    console.error("Critical error during script execution:", error);
+    process.exit(1); // Exit with error code
+});
